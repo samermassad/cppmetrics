@@ -8,7 +8,7 @@ GTEST_TARGET_PACKAGE=${GTEST_TARGET}.zip
 make_glog() {
     INSTALL_DIR=$1
     echo "Fetching glog package."
-    curl https://google-glog.googlecode.com/files/${GLOG_TARGET_PACKAGE} -o ${GLOG_TARGET_PACKAGE}
+    curl https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-glog/${GLOG_TARGET_PACKAGE} -o ${GLOG_TARGET_PACKAGE}
     echo "Unzipping ${GLOG_TARGET_PACKAGE} package."
     tar -zxvf ${GLOG_TARGET_PACKAGE}
     cd ${GLOG_TARGET} && ./configure --prefix=${INSTALL_DIR} --enable-shared=false
